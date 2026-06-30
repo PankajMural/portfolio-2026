@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Home</title>
+    <meta
+      name="description"
+      content="Front-end developer and designer portfolio — clean, thoughtful web design and development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-home">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__content">
+          <span class="marquee__item"></span>
+          <span class="marquee__item"></span>
+          <span class="marquee__item"></span>
+          <span class="marquee__item"></span>
+          <span class="marquee__item"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page page-enter">
+      <header class="site-header site-header--home">
+        <div class="site-header__meta site-header__meta--home">
+          <div class="site-header__meta-block">
+            <span class="site-header__meta-label">Version</span>
+            <span class="site-header__meta-value" data-config="version"></span>
+          </div>
+          <div class="site-header__meta-block">
+            <span class="site-header__meta-label">Local Time</span>
+            <span class="site-header__meta-value site-header__meta-time">
+              <span data-auto-location></span>
+              <span id="local-time">--:--:--</span>
+            </span>
+          </div>
+        </div>
+        <div class="site-header__right">
+          <nav class="site-nav" aria-label="Main menu">
+            <span class="site-nav__label">[Menu]</span>
+            <ul class="site-nav__list"></ul>
+          </nav>
+          <button class="menu-btn" type="button" aria-label="Open menu">
+            [Menu]
+          </button>
+        </div>
+      </header>
+
+      <main class="hero">
+        <h1 class="hero__title">
+          <span data-config="name"></span><br />
+          <span data-config="nameLine2"></span>
+        </h1>
+        <p class="hero__subtitle">
+          <span data-config="role"></span><br />
+          <span data-config="location"></span>
+        </p>
+        <p class="hero__intro" data-config="intro"></p>
+      </main>
+
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="about.html" class="page-nav__link page-nav__next">Next Page</a>
+        <div class="page-nav__socials"></div>
+      </nav>
+    </div>
+
+    <nav class="menu-overlay" aria-label="Main menu" aria-hidden="true">
+      <button class="menu-overlay__close" type="button" aria-label="Close menu">
+        [Close]
+      </button>
+      <ul class="menu-overlay__list"></ul>
+    </nav>
+
+    <script src="js/config.js"></script>
+    <script src="js/location.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
