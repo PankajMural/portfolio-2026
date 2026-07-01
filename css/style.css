@@ -657,7 +657,7 @@ body.page-inner .project-case__split {
 
 .work-item__visual {
   width: 100%;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 3;
   min-height: unset;
   height: auto;
   background: #ffffff;
@@ -752,7 +752,6 @@ body.page-inner .project-case__split {
 .project-case__video--hero,
 .project-case__placeholder--hero {
   width: 100%;
-  aspect-ratio: 5 / 4;
   min-height: unset;
   max-height: none;
   object-fit: cover;
@@ -863,6 +862,41 @@ body.page-inner .project-case__split {
   object-fit: cover;
   border: none;
   border-radius: 0;
+}
+
+.project-case__gallery-item--text {
+  width: 100%;
+}
+
+.project-case__gallery-text {
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: var(--color-text-inner);
+}
+
+.project-case__gallery-text p {
+  margin-bottom: 1.25rem;
+}
+
+.project-case__gallery-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.project-case__gallery-heading {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-bottom: 0.875rem;
+  margin-top: 1.5rem;
+  color: var(--color-text-inner);
+}
+
+.project-case__gallery-heading:first-child {
+  margin-top: 0;
 }
 
 .project-case--empty {
@@ -1077,7 +1111,7 @@ body.page-inner .project-case__split {
     grid-row: 1;
     height: auto;
     min-height: unset;
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 4 / 3;
   }
 
   .work-item__meta {

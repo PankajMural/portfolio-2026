@@ -29,7 +29,11 @@ function renderServicesList(services) {
 
 function renderGallery(items, title) {
   return items
-    .map((src, index) => {
+    .map((item, index) => {
+      if (typeof item === "object" && item.type === "text") {
+        return `<div class="project-case__gallery-item project-case__gallery-item--text">${item.content}</div>`;
+      }
+      const src = item;
       const label = `${title} — media ${index + 1}`;
       const content = renderMedia(src, label, "gallery");
       return `<div class="project-case__gallery-item">${content}</div>`;
