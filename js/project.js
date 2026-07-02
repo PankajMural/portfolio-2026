@@ -27,6 +27,15 @@ function renderServicesList(services) {
   return services.map((item) => `<li>${item}</li>`).join("");
 }
 
+function renderIndustriesList(industries) {
+  return industries
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .map((industry) => `<li>${industry}</li>`)
+    .join("");
+}
+
 function renderGallery(items, title) {
   return items
     .map((item, index) => {
@@ -79,6 +88,16 @@ function renderProject(project) {
         <div class="project-case__overview">
           <p>${project.overview}</p>
           ${project.overviewLink ? `<a href="${project.overviewLink.url}" class="work-item__link" target="_blank" rel="noopener noreferrer"><strong>${project.overviewLink.label}</strong> →</a>` : ""}
+
+          <div class="project-case__section">
+            <h3 class="project-case__section-heading">Challenge</h3>
+            <div class="project-case__section-content">${project.challenge}</div>
+          </div>
+
+          <div class="project-case__section">
+            <h3 class="project-case__section-heading">What I did</h3>
+            <div class="project-case__section-content">${project.whatIDid}</div>
+          </div>
         </div>
         <aside class="project-case__details">
           <table class="project-case__table">
@@ -93,15 +112,11 @@ function renderProject(project) {
               </tr>
               <tr>
                 <th scope="row">Industries</th>
-                <td>${project.industries}</td>
-              </tr>
-              <tr>
-                <th scope="row">Challenge</th>
-                <td>${project.challenge}</td>
-              </tr>
-              <tr>
-                <th scope="row">What I did</th>
-                <td>${project.whatIDid}</td>
+                <td>
+                  <ul class="project-case__services project-case__industries">
+                    ${renderIndustriesList(project.industries)}
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
