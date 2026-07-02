@@ -44,7 +44,7 @@ const PROJECTS = {
       "Retrofitting accessibility late in development caused costly delays and endless bug bounces between QA, frontend, and design. Designers lacked a clear, actionable way to communicate complex WCAG requirements to engineers, making inclusive design feel like an overwhelming compliance hurdle rather than a core product feature.",
     whatIDid:
       "<ul class=\"project-case__services\"><li><strong>Audited & Filtered WCAG:</strong> Analyzed all 78 WCAG 2.1 criteria and isolated the 38 directly influenced by UI/UX design decisions, giving designers clear, manageable ownership.</li><li><strong>Architected the Toolkit:</strong> Built a bespoke Figma annotation system featuring flexible Arrow, Lasso, and Detail stamps to visually map focus order, contrast, and screen reader logic without cluttering the canvas.</li><li><strong>Categorized for Clarity:</strong> Grouped annotations into three intuitive pillars: Visual Design, Screen Reader Support, and Keyboard Accessibility.</li><li><strong>Drove Adoption & Culture Shift:</strong> Led hands-on workshops and VoiceOver demonstrations to upskill the team, ultimately reducing QA accessibility testing time by 30% and eliminating late-stage design rework.</li></ul>",
-    heroImage: "images/projects/A11y/AY11-2.mp4",
+    heroImage: "images/projects/A11y/Ay11-2.mp4",
     gallery: ["images/projects/A11y/accessility_1.mp4"],
   },
   "agency-portfolio": {
