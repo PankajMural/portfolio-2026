@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Setup & Workflow Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --theme: #e56a44;
+        --bg: #f4f2e6;
+        --text: #2a2a2a;
+        --muted: rgba(42, 42, 42, 0.65);
+        --border: rgba(229, 106, 68, 0.25);
+        --code-bg: #fff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+        padding: 2rem 1.25rem 4rem;
+      }
+
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--theme);
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .lead {
+        color: var(--muted);
+        margin-bottom: 2.5rem;
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--theme);
+        margin: 2.5rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px dashed var(--border);
+      }
+
+      h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin: 1.5rem 0 0.75rem;
+      }
+
+      p,
+      li {
+        font-size: 0.9375rem;
+        margin-bottom: 0.75rem;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+
+      code {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 0.85em;
+        background: var(--code-bg);
+        padding: 0.15em 0.4em;
+        border-radius: 3px;
+        border: 1px solid var(--border);
+      }
+
+      pre {
+        background: var(--code-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 1rem 1.25rem;
+        overflow-x: auto;
+        margin: 1rem 0 1.25rem;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+      }
+
+      pre code {
+        background: none;
+        border: none;
+        padding: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        margin: 1rem 0 1.5rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 0.65rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      th {
+        font-weight: 600;
+        color: var(--theme);
+        width: 38%;
+      }
+
+      .note {
+        background: #fff;
+        border-left: 3px solid var(--theme);
+        padding: 1rem 1.25rem;
+        margin: 1.25rem 0;
+        font-size: 0.875rem;
+      }
+
+      .note strong {
+        color: var(--theme);
+      }
+
+      a {
+        color: var(--theme);
+      }
+
+      .flow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin: 1rem 0 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .flow span {
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 0.35rem 0.75rem;
+        border-radius: 4px;
+      }
+
+      .flow .arrow {
+        background: none;
+        border: none;
+        color: var(--muted);
+        padding: 0;
+      }
+
+      footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px dashed var(--border);
+        font-size: 0.8125rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Portfolio — Setup &amp; Workflow Guide</h1>
+      <p class="lead">
+        How to connect GitHub, Vercel, and VS Code — and the best workflow for
+        editing this website.
+      </p>
+
+      <h2>What you have</h2>
+      <p>
+        This is a <strong>static website</strong> — HTML, CSS, and JavaScript
+        only. No build step is required. Vercel serves the files as-is, which
+        makes updates fast and simple.
+      </p>
+
+      <h2>One-time setup</h2>
+
+      <h3>1. Install tools</h3>
+      <ul>
+        <li>
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>
+          — for editing files
+        </li>
+        <li>
+          <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>
+          — for version control (includes Git Bash on Windows)
+        </li>
+        <li>
+          <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>
+          (optional) — only needed if you want a local preview server via
+          <code>npx serve</code>
+        </li>
+      </ul>
+
+      <h3>2. Create a GitHub repository</h3>
+      <ol>
+        <li>Sign in at <a href="https://github.com" target="_blank" rel="noopener">github.com</a></li>
+        <li>Click <strong>New repository</strong></li>
+        <li>Name it e.g. <code>portfolio-2026</code></li>
+        <li>Leave it empty — do not add README or .gitignore yet</li>
+        <li>Copy the repository URL (e.g. <code>https://github.com/yourname/portfolio-2026.git</code>)</li>
+      </ol>
+
+      <h3>3. Push your project to GitHub</h3>
+      <p>Open a terminal in your project folder and run:</p>
+      <pre><code>cd "e:\Valtech\Web Projects\Protfolio-2026"
+
+git init
+git add .
+git commit -m "Initial portfolio setup"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/portfolio-2026.git
+git push -u origin main</code></pre>
+      <p>Replace <code>YOUR_USERNAME</code> with your GitHub username.</p>
+
+      <h3>4. Connect Vercel</h3>
+      <ol>
+        <li>Sign up at <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> using your <strong>GitHub</strong> account</li>
+        <li>Click <strong>Add New → Project</strong></li>
+        <li>Import your <code>portfolio-2026</code> repository</li>
+        <li>Use these settings:</li>
+      </ol>
+      <table>
+        <tr>
+          <th>Framework Preset</th>
+          <td><strong>Other</strong></td>
+        </tr>
+        <tr>
+          <th>Build Command</th>
+          <td>Leave empty</td>
+        </tr>
+        <tr>
+          <th>Output Directory</th>
+          <td><code>.</code> (root)</td>
+        </tr>
+        <tr>
+          <th>Install Command</th>
+          <td>Leave empty</td>
+        </tr>
+      </table>
+      <ol start="5">
+        <li>Click <strong>Deploy</strong></li>
+        <li>You will get a live URL like <code>portfolio-2026.vercel.app</code></li>
+      </ol>
+
+      <div class="note">
+        <strong>Custom domain:</strong> In Vercel → Project → Settings → Domains,
+        add your own domain and follow the DNS instructions.
+      </div>
+
+      <h3>5. Open the project in VS Code</h3>
+      <ol>
+        <li>Open VS Code</li>
+        <li><strong>File → Open Folder</strong></li>
+        <li>Select <code>Protfolio-2026</code></li>
+      </ol>
+      <p>Recommended VS Code extensions:</p>
+      <ul>
+        <li><strong>Live Server</strong> — preview changes in the browser while editing</li>
+        <li><strong>Prettier</strong> — keeps HTML/CSS/JS formatted (optional)</li>
+      </ul>
+
+      <h2>Best workflow for editing</h2>
+
+      <div class="flow">
+        <span>Edit in VS Code</span>
+        <span class="arrow">→</span>
+        <span>Preview locally</span>
+        <span class="arrow">→</span>
+        <span>Git commit</span>
+        <span class="arrow">→</span>
+        <span>Git push</span>
+        <span class="arrow">→</span>
+        <span>Vercel auto-deploys</span>
+      </div>
+
+      <h3>Step 1 — Edit files</h3>
+      <p>Most changes happen in these files:</p>
+      <table>
+        <tr>
+          <th><code>js/config.js</code></th>
+          <td>
+            Your name, role, email, social links, marquee text, intro
+            paragraph, version label
+          </td>
+        </tr>
+        <tr>
+          <th><code>js/projects.js</code></th>
+          <td>
+            Full project case studies — text, images (<code>.jpg</code>,
+            <code>.png</code>), videos (<code>.mp4</code>)
+          </td>
+        </tr>
+        <tr>
+          <th><code>about.html</code></th>
+          <td>About page body text</td>
+        </tr>
+        <tr>
+          <th><code>service.html</code></th>
+          <td>Services list and descriptions</td>
+        </tr>
+        <tr>
+          <th><code>work.html</code></th>
+          <td>Work page project cards and links</td>
+        </tr>
+        <tr>
+          <th><code>contact.html</code></th>
+          <td>Contact page text</td>
+        </tr>
+        <tr>
+          <th><code>css/style.css</code></th>
+          <td>Colors, fonts, spacing, layout</td>
+        </tr>
+        <tr>
+          <th><code>fonts/</code></th>
+          <td>Custom fonts (TheNightWatch, Inter)</td>
+        </tr>
+        <tr>
+          <th><code>images/projects/</code></th>
+          <td>Project images and videos (create this folder when needed)</td>
+        </tr>
+      </table>
+
+      <h3>Step 2 — Preview locally</h3>
+      <p><strong>Option A — Live Server (recommended)</strong></p>
+      <ol>
+        <li>Install the Live Server extension in VS Code</li>
+        <li>Right-click <code>index.html</code> → <strong>Open with Live Server</strong></li>
+        <li>Browser opens at <code>http://127.0.0.1:5500</code> and refreshes on save</li>
+      </ol>
+      <p><strong>Option B — Python (if installed)</strong></p>
+      <pre><code>cd "e:\Valtech\Web Projects\Protfolio-2026"
+python -m http.server 3456</code></pre>
+      <p>Then open <code>http://localhost:3456</code></p>
+
+      <h3>Step 3 — Save and publish</h3>
+      <p>When you are happy with your changes, push to GitHub. Vercel deploys automatically.</p>
+      <pre><code>git add .
+git commit -m "Update about page copy"
+git push</code></pre>
+      <p>Your live site updates in about 30–60 seconds. Check progress in the Vercel dashboard.</p>
+
+      <h2>Adding a new project</h2>
+      <ol>
+        <li>Add an entry in <code>js/projects.js</code> (copy an existing project block)</li>
+        <li>Add a project card on <code>work.html</code> with link:
+          <code>project.html?p=your-slug</code></li>
+        <li>Put media files in <code>images/projects/your-slug/</code></li>
+        <li>Reference paths in <code>projects.js</code>, e.g.
+          <code>"images/projects/your-slug/hero.mp4"</code></li>
+        <li>Commit and push</li>
+      </ol>
+
+      <h2>Adding images &amp; videos to a project</h2>
+      <p>In <code>js/projects.js</code>:</p>
+      <pre><code>heroImage: "images/projects/brand-identity/hero.mp4",
+gallery: [
+  "images/projects/brand-identity/screen-01.jpg",
+  "images/projects/brand-identity/demo.mp4",
+  "images/projects/brand-identity/screen-02.jpg",
+],</code></pre>
+      <p>
+        Videos (<code>.mp4</code>, <code>.webm</code>, <code>.mov</code>) autoplay
+        muted with no player controls. Leave paths as <code>""</code> to show a
+        white placeholder until files are ready.
+      </p>
+
+      <h2>Tips for a smooth workflow</h2>
+      <ul>
+        <li>
+          <strong>Commit often</strong> — small commits with clear messages
+          (e.g. <code>Update work page projects</code>) are easier to track
+        </li>
+        <li>
+          <strong>Preview before pushing</strong> — always check locally with
+          Live Server first
+        </li>
+        <li>
+          <strong>Use branches for big changes</strong> — create a branch in
+          GitHub/VS Code, merge when ready; Vercel gives each branch a preview URL
+        </li>
+        <li>
+          <strong>Never commit secrets</strong> — no passwords or API keys in
+          your files; this site does not need a <code>.env</code> file
+        </li>
+        <li>
+          <strong>VS Code Source Control</strong> — click the branch icon in
+          the left sidebar to commit and push without using the terminal
+        </li>
+      </ul>
+
+      <h2>Quick reference — Git commands</h2>
+      <table>
+        <tr>
+          <th><code>git status</code></th>
+          <td>See what files changed</td>
+        </tr>
+        <tr>
+          <th><code>git add .</code></th>
+          <td>Stage all changes for commit</td>
+        </tr>
+        <tr>
+          <th><code>git commit -m "message"</code></th>
+          <td>Save a snapshot locally</td>
+        </tr>
+        <tr>
+          <th><code>git push</code></th>
+          <td>Upload to GitHub → triggers Vercel deploy</td>
+        </tr>
+        <tr>
+          <th><code>git pull</code></th>
+          <td>Download latest from GitHub (if editing on another machine)</td>
+        </tr>
+      </table>
+
+      <h2>Troubleshooting</h2>
+      <table>
+        <tr>
+          <th>Site not updating after push</th>
+          <td>Check Vercel dashboard for deploy status; confirm you pushed to <code>main</code></td>
+        </tr>
+        <tr>
+          <th>Changes look wrong locally</th>
+          <td>Hard refresh browser: <code>Ctrl + Shift + R</code></td>
+        </tr>
+        <tr>
+          <th>Git push rejected</th>
+          <td>Run <code>git pull</code> first, resolve conflicts, then push again</td>
+        </tr>
+        <tr>
+          <th>Images not showing live</th>
+          <td>Check file path in <code>projects.js</code> matches the folder; ensure files were committed and pushed</td>
+        </tr>
+      </table>
+
+      <footer>
+        Portfolio 2026 — Static site workflow guide. Open this file in any browser
+        anytime for reference.
+      </footer>
+    </div>
+  </body>
+</html>

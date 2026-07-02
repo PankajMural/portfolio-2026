@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | About</title>
+    <meta name="description" content="About — front-end developer and designer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-inner">
+    <div class="page page-enter">
+      <header class="site-header site-header--inner">
+        <a href="index.html" class="site-header__brand">
+          <span class="site-header__brand-name"></span>
+          <span class="site-header__brand-role"></span>
+        </a>
+        <div class="site-header__right">
+          <nav class="site-nav" aria-label="Main menu">
+            <span class="site-nav__label">[Menu]</span>
+            <ul class="site-nav__list"></ul>
+          </nav>
+          <button class="menu-btn" type="button" aria-label="Open menu">
+            [Menu]
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <header class="page-header">
+          <h1 class="page-header__title">about</h1>
+          <p class="page-header__subtitle">Who I am and what I care about</p>
+          <div class="page-header__border" aria-hidden="true"></div>
+        </header>
+        <div class="page-content__body">
+          <p>
+            I am a Senior Product Designer with 13+ years of experience shaping scalable digital products and design systems for global enterprises. 
+            I operate at the intersection of UI/UX, accessibility governance (WCAG 2.2), and design-engineering alignment. 
+          </p>
+          <p>
+            I care deeply about bridging the gap between creative craft and technical execution. 
+            I believe inclusive, high-quality design should scale seamlessly, which is why I leverage my front-end foundations to build robust systems that empower teams and eliminate friction. 
+          </p>
+          <p>
+            When I'm not designing, you'll find me flying drones, experimenting with Gen AI to create short films and cartoons
+          </p>
+        </div>
+      </main>
+
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="service.html" class="page-nav__link page-nav__next">Next Page</a>
+        <div class="page-nav__socials"></div>
+      </nav>
+    </div>
+
+    <nav class="menu-overlay" aria-label="Main menu" aria-hidden="true">
+      <button class="menu-overlay__close" type="button" aria-label="Close menu">
+        [Close]
+      </button>
+      <ul class="menu-overlay__list"></ul>
+    </nav>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

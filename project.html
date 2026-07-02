@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Project</title>
+    <meta name="description" content="Project case study." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-inner page-project">
+    <div class="page page-enter">
+      <header class="site-header site-header--inner">
+        <a href="index.html" class="site-header__brand">
+          <span class="site-header__brand-name"></span>
+          <span class="site-header__brand-role"></span>
+        </a>
+        <div class="site-header__right">
+          <nav class="site-nav" aria-label="Main menu">
+            <span class="site-nav__label">[Menu]</span>
+            <ul class="site-nav__list"></ul>
+          </nav>
+          <button class="menu-btn" type="button" aria-label="Open menu">
+            [Menu]
+          </button>
+        </div>
+      </header>
+
+      <main class="project-case-wrap" id="project-root"></main>
+
+      <nav class="page-nav page-nav--project" aria-label="Project navigation">
+        <a href="work.html" class="page-nav__link">← Back to Work</a>
+        <div class="page-nav__socials"></div>
+      </nav>
+    </div>
+
+    <nav class="menu-overlay" aria-label="Main menu" aria-hidden="true">
+      <button class="menu-overlay__close" type="button" aria-label="Close menu">
+        [Close]
+      </button>
+      <ul class="menu-overlay__list"></ul>
+    </nav>
+
+    <script src="js/config.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project.js"></script>
+  </body>
+</html>

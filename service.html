@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Service</title>
+    <meta name="description" content="Services — web design, development, and creative direction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-inner">
+    <div class="page page-enter">
+      <header class="site-header site-header--inner">
+        <a href="index.html" class="site-header__brand">
+          <span class="site-header__brand-name"></span>
+          <span class="site-header__brand-role"></span>
+        </a>
+        <div class="site-header__right">
+          <nav class="site-nav" aria-label="Main menu">
+            <span class="site-nav__label">[Menu]</span>
+            <ul class="site-nav__list"></ul>
+          </nav>
+          <button class="menu-btn" type="button" aria-label="Open menu">
+            [Menu]
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <header class="page-header">
+          <h1 class="page-header__title">service</h1>
+          <p class="page-header__subtitle">Design, development, and creative direction</p>
+          <div class="page-header__border" aria-hidden="true"></div>
+        </header>
+        <div class="services-grid">
+          <article class="service-card">
+            <p class="service-card__number">01</p>
+            <h2 class="service-card__title">Web Design</h2>
+            <p class="service-card__desc">
+              Crafting visually compelling interfaces with a focus on
+              typography, hierarchy, and user experience. From concept to
+              high-fidelity prototypes.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">02</p>
+            <h2 class="service-card__title">Development</h2>
+            <p class="service-card__desc">
+              Building fast, accessible, and maintainable websites with
+              modern frameworks. Clean code that brings designs to life with
+              precision.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">03</p>
+            <h2 class="service-card__title">Motion & Interaction</h2>
+            <p class="service-card__desc">
+              Subtle animations and micro-interactions that elevate the
+              user experience. Thoughtful motion that feels natural and
+              purposeful.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__number">04</p>
+            <h2 class="service-card__title">Creative Direction</h2>
+            <p class="service-card__desc">
+              Guiding the visual identity and creative strategy for digital
+              products. Ensuring consistency across every touchpoint.
+            </p>
+          </article>
+        </div>
+      </main>
+
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="work.html" class="page-nav__link page-nav__next">Next Page</a>
+        <div class="page-nav__socials"></div>
+      </nav>
+    </div>
+
+    <nav class="menu-overlay" aria-label="Main menu" aria-hidden="true">
+      <button class="menu-overlay__close" type="button" aria-label="Close menu">
+        [Close]
+      </button>
+      <ul class="menu-overlay__list"></ul>
+    </nav>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
